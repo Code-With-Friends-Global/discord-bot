@@ -1,2 +1,3 @@
 # discord-bot
-A Discord bot for playing the Code With Friends learning game
+
+A Discord bot for playing the Code With Friends learning game.
