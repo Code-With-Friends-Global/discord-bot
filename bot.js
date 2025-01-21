@@ -6,7 +6,7 @@ import {
 	Client, Collection, Events, GatewayIntentBits,
 } from 'discord.js';
 import dotenv from 'dotenv';
-import { loadCommands } from './utils';
+import { loadCommands } from './utils.js';
 
 dotenv.config()
 
