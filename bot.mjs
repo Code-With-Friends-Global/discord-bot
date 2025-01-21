@@ -6,9 +6,10 @@ import {
 	Client, Collection, Events, GatewayIntentBits,
 } from 'discord.js';
 import dotenv from 'dotenv';
-import { loadCommands } from './utils.js';
+import { loadCommands, loadConfig } from './utils.mjs';
 
-dotenv.config()
+const { token } = await loadConfig();
+
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -20,10 +21,10 @@ client.once(Events.ClientReady, (readyClient) => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
-console.log(process.env.DISCORD_TOKEN);
+console.log(token);
 
 // Log in to Discord with your client's token
-client.login(process.env.DISCORD_TOKEN);
+client.login(token);
 client.commands = new Collection();
 
 (await loadCommands()).forEach((command) => (

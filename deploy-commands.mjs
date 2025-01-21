@@ -1,7 +1,7 @@
 import { REST, Routes } from 'discord.js';
-import { clientId, guildId, token } from './config.json';
-import fs from 'node:fs';
-import path from 'node:path';
+
+import { loadCommands, loadConfig } from './utils.mjs';
+const { clientId, guildId, token } = await loadConfig();
 
 const commands = (
 	(await loadCommands())
