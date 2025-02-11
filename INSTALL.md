@@ -23,4 +23,3 @@ Follow these steps below. For both the Bot Token and the Client ID from the
 ## Guild ID
 
 
-
