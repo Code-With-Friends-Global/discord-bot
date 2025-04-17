@@ -3,13 +3,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import {
-	Client, Collection, Events, GatewayIntentBits,
+	Client, Collection, Events, GatewayIntentBits, MessageFlags,
 } from 'discord.js';
-import dotenv from 'dotenv';
 import { loadCommands, loadConfig } from './utils.mjs';
 
 const { token } = await loadConfig();
-
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
